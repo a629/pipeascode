@@ -1,1 +1,25 @@
-
+@Library('mylibrary') _
+pipeline{
+    agent any
+    stages{
+        stage('compile'){
+            steps{
+                sh 'mkdir asd1'
+                sh 'cd asd1'
+                sh 'ls -lart'
+                sh 'git init'
+                sh 'ls -lart'
+                sh 'git clone -b readme-edits https://github.com/a629/hello-world.git'
+                sh 'cd hello-world'
+                sh 'ls -lart'
+                dir("C:/Program Files (x86)/Jenkins/workspace/emailpipeline/hello-world") {
+                    sh "pwd"
+                    foo()
+                }
+                sh 'pwd'
+                sh 'ls -lart'
+                sleep 10
+            }
+        }
+    }
+}

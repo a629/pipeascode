@@ -5,6 +5,7 @@ pipeline{
         stage('compile'){
             steps{
                 sh 'mkdir asd1'
+                sh 'echo Hello World!!'
                 sh 'cd asd1'
                 sh 'ls -lart'
                 sh 'git init'

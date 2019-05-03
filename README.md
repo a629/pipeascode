@@ -1,3 +1,3 @@
 # pipeascode
-sample pipeline as code project
+sample pipeline as code project.
 readme edited to trigger build

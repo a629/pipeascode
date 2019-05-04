@@ -6,6 +6,7 @@ pipeline{
 	 agent any
 	 steps{
 		sh 'echo pipeline started'
+		sh 'echo pipe as code'
 		sh 'javac hello.java'
 		sh 'java hello'
 		sh 'ls -lrt'

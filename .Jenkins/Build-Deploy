@@ -1,5 +1,5 @@
 //@Library('mylibrary') _
-pipeleine{
+pipeline{
 	agent none
   stages{
 	stage('Compile'){

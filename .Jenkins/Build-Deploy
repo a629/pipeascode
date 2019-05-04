@@ -1,9 +1,8 @@
 @Library('mylibrary') _
 pipeline{
 	agent none
-  stages{
 	stage('Compile'){
-	 agent {any}
+	 agent any
 	 steps{
 		sh 'echo pipeline started'
 		sh 'javac hello.java'
@@ -13,7 +12,7 @@ pipeline{
 		}
 	}
 	stage('sonarScanning'){
-		agent {any}
+		agent any
 		steps{
 			def scannerHome = tool 'SonarQube Scanner 2.8';
 			withSonarQubeEnv('My SonarQube Server') {
@@ -30,7 +29,7 @@ pipeline{
     }
   }
   }
-  }
+  
   }
 			
 			

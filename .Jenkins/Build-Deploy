@@ -2,7 +2,7 @@
 pipeleine{
 	agent none
 	stage('Compile'){
-	 agent any
+	 agent {any}
 	 steps{
 		sh 'echo pipeline started'
 		sh 'javac hello.java'
@@ -12,7 +12,7 @@ pipeleine{
 		}
 	}
 	stage('sonarScanning'){
-		agent any
+		agent {any}
 		steps{
 			def scannerHome = tool 'SonarQube Scanner 2.8';
 			withSonarQubeEnv('My SonarQube Server') {

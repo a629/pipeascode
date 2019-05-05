@@ -5,6 +5,7 @@ pipeline{
 	stage('Compile'){
 	 agent any
 	 steps{
+	 	step([$class: 'Mailer', notifyEveryUnstableBuild: true, recipients: emailextrecipients([[$class: 'CulpritsRecipientProvider'], [$class: 'RequesterRecipientProvider']])])
 		sh 'echo pipeline started'
 		sh 'echo pipe as code'
 		sh 'javac hello.java'
